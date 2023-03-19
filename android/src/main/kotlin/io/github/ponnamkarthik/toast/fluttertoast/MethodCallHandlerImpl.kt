@@ -45,7 +45,7 @@ internal class MethodCallHandlerImpl(var context: Context) : MethodCallHandler {
                     Toast.LENGTH_SHORT
                 }
 
-                if (bgcolor != null && Build.VERSION.SDK_INT <= 31) {
+                if (bgcolor != null && Build.VERSION.SDK_INT <= 33) {
                     val layout = (context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater).inflate(R.layout.toast_custom, null)
                     val text = layout.findViewById<TextView>(R.id.text)
                     text.text = mMessage
@@ -82,7 +82,7 @@ internal class MethodCallHandlerImpl(var context: Context) : MethodCallHandler {
                         }
                     }
                 }
-                if(Build.VERSION.SDK_INT <= 31) {
+                if(Build.VERSION.SDK_INT <= 33) {
                     when (mGravity) {
                         Gravity.CENTER -> {
                             mToast?.setGravity(mGravity, 0, 0)

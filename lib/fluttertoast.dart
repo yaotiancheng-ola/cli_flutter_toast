@@ -151,7 +151,7 @@ class FToast {
 
     /// To prevent exception "Looking up a deactivated widget's ancestor is unsafe."
     /// which can be thrown if context was unmounted (e.g. screen with given context was popped)
-    /// TODO: revert this change when envoirment will be Flutter >= 3.7.0
+
     // if (context?.mounted != true) {
     //   if (kDebugMode) {
     //     print(
